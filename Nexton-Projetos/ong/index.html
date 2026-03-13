@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Movimento Fio Solidário | Doação de cabelo para pacientes com câncer</title>
+
+<meta name="description" content="O Movimento Fio Solidário transforma doações de cabelo em perucas para pacientes com câncer. Doe cabelo e ajude a devolver autoestima e esperança.">
+
+<meta name="keywords" content="doação de cabelo, ONG câncer, perucas para câncer, ajuda pacientes câncer">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f8f8f8;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+background:white;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
+
+.logo{
+font-weight:600;
+font-size:22px;
+color:#e91e63;
+}
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.menu a:hover{
+color:#e91e63;
+}
+
+/* HAMBURGUER */
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9");
+
+background-size:cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+
+background:#e91e63;
+padding:14px 30px;
+color:white;
+border:none;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+text-decoration:none;
+}
+
+.btn:hover{
+background:#c2185b;
+}
+
+/* SECTIONS */
+
+section{
+padding:90px 10%;
+}
+
+.title{
+text-align:center;
+font-size:34px;
+color:#e91e63;
+margin-bottom:50px;
+}
+
+/* SOBRE */
+
+.sobre{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.sobre img{
+width:100%;
+border-radius:12px;
+}
+
+/* SERVIÇOS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.card{
+
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#e91e63;
+margin-bottom:10px;
+}
+
+/* CARROSSEL */
+
+.carousel{
+max-width:900px;
+margin:auto;
+overflow:hidden;
+border-radius:12px;
+}
+
+.carousel img{
+width:100%;
+display:none;
+}
+
+.carousel img.active{
+display:block;
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.depoimento{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.depoimento img{
+width:60px;
+height:60px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
+/* PIX */
+
+.pix{
+text-align:center;
+background:#fff;
+padding:50px;
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* CONTATO */
+
+form input,
+form textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+padding:16px;
+border-radius:50%;
+font-size:22px;
+color:white;
+text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.menu{
+display:none;
+flex-direction:column;
+background:white;
+position:absolute;
+top:70px;
+right:0;
+width:200px;
+padding:20px;
+}
+
+.menu.active{
+display:flex;
+}
+
+.hamburger{
+display:block;
+}
+
+.sobre{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="nav">
+
+<div class="logo">Fio Solidário</div>
+
+<div class="menu" id="menu">
+
+<a href="#">Home</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#doar">Doar</a>
+<a href="#contato">Contato</a>
+
+</div>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Movimento Fio Solidário</h1>
+
+<p>Transformando doações de cabelo em esperança.</p>
+
+<a class="btn" href="#doar">Quero ajudar</a>
+
+</div>
+
+</section>
+
+<section id="sobre">
+
+<h2 class="title">Sobre a ONG</h2>
+
+<div class="sobre">
+
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+
+<div>
+
+<p>O Movimento Fio Solidário conecta doadores de cabelo com pacientes em tratamento contra o câncer.</p>
+
+<br>
+
+<p>Nosso objetivo é devolver autoestima, esperança e dignidade através da solidariedade.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="servicos">
+
+<h2 class="title">Nossos Serviços</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Doação de cabelo</h3>
+<p>Recebemos cabelos doados.</p>
+</div>
+
+<div class="card">
+<h3>Produção de perucas</h3>
+<p>Transformamos em perucas naturais.</p>
+</div>
+
+<div class="card">
+<h3>Entrega gratuita</h3>
+<p>Para pacientes com câncer.</p>
+</div>
+
+<div class="card">
+<h3>Ações sociais</h3>
+<p>Campanhas de solidariedade.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Nosso Impacto</h2>
+
+<div class="carousel">
+
+<img class="active" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Depoimentos</h2>
+
+<div class="depoimentos">
+
+<div class="depoimento">
+<img src="https://randomuser.me/api/portraits/women/45.jpg">
+<p>"Receber uma peruca mudou minha autoestima."</p>
+</div>
+
+<div class="depoimento">
+<img src="https://randomuser.me/api/portraits/women/68.jpg">
+<p>"Doar cabelo foi uma experiência incrível."</p>
+</div>
+
+<div class="depoimento">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<p>"Projeto maravilhoso."</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="doar">
+
+<div class="pix">
+
+<h2 class="title">Ajude com uma doação</h2>
+
+<p>Chave PIX:</p>
+
+<h3>doacao@fiosolidario.org</h3>
+
+<br>
+
+<a class="btn">Copiar chave PIX</a>
+
+</div>
+
+</section>
+
+<section id="contato">
+
+<h2 class="title">Contato</h2>
+
+<form>
+
+<input placeholder="Nome">
+
+<input placeholder="Email">
+
+<textarea placeholder="Mensagem"></textarea>
+
+<button class="btn">Enviar</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>Movimento Fio Solidário © 2026</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5511999999999">💬</a>
+
+<script>
+
+function toggleMenu(){
+
+document.getElementById("menu").classList.toggle("active")
+
+}
+
+/* CARROSSEL */
+
+let slides = document.querySelectorAll(".carousel img")
+let index=0
+
+setInterval(()=>{
+
+slides[index].classList.remove("active")
+
+index++
+
+if(index>=slides.length) index=0
+
+slides[index].classList.add("active")
+
+},4000)
+
+</script>
+
+</body>
+</html>
